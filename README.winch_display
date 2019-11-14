@@ -1,0 +1,32 @@
+Nov 2019 SJM
+============================
+AT42-09 (Jason) R/V Atlantis
+
+Atlantis Winch Report is a utility that displays
+readings from the RV Atlantis fiber winch in a
+small widget.
+
+The readings are obtained by listening on the Atlantis's
+SciNet network for UDP broadcasts. The datagrams are
+one line datagrams of comma separated fields.
+
+The code is written using using the PyQt dist
+of the QT5 framework, the version offered natively
+under Ubuntu 16.04.
+
+During AT42-09 the implementation was set up as follows:
+
+1. This code was installed on a host (TIFgrab4) that
+included an install of PyQt5.
+
+2. So that the Jason Engineer can view conveniently, a
+desktop shortcut launcher was created on the host
+called "TopsideSpare_EngGUI". The command embedded in
+the launcher used 'sshpass' and 'ssh -X' to launch the
+code on TIFgrab4. The XWindow system then caused the display
+of the widget on TopsideSpare_EngGUI.
+
+By right-clicking on the widget top bar and selecting
+"Always on top" the use can keep the widget in view.
+There is an unused region in the bottom right of the
+Engineer's GUI into which the widget fits well.
